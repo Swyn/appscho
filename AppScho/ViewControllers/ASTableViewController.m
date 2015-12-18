@@ -28,9 +28,11 @@ static NSString * const BaseURLString = @"https://rec.api.appscho.com/";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //set datasources and delegates for the tableView
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
+    //In order to avoid a disgracefull table view moving for nothing we check if the content fit in the table view height and freeze it.
     if (self.tableView.contentSize.height < self.tableView.frame.size.height) {
         self.tableView.scrollEnabled = NO;
     }
@@ -43,9 +45,10 @@ static NSString * const BaseURLString = @"https://rec.api.appscho.com/";
 
 -(void)viewWillAppear:(BOOL)animated {
 
-    
+    //set top text
     [self.topViewLabel setText:[NSString stringWithFormat:@"Bonjour %@", self.userName]];
     
+    //And we go fetch the datas
     [self getDatas];
     
 }
@@ -58,18 +61,32 @@ static NSString * const BaseURLString = @"https://rec.api.appscho.com/";
 
 -(void)getDatas {
     
+    /*  We use AFNetworking 3 (first time... no more requestOperations I need to update my knowledge on this)
+        1/ We create an NSURL and init the manager with said URL
+        2/ We set the repsonse format for the manager
+        3/ Send get method 
+        4/ We put our JSON serialized response in a dictionary and send it to the ASEnvironment object setter
+        5/ Reload table view data's
+    */
     
+    //*1*
     NSString *string =  BaseURLString;
     NSURL *url = [NSURL URLWithString:string];
-    //    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:url];
+    
+    //*2*
     [manager setResponseSerializer:[AFJSONResponseSerializer serializer]];
+    
+    //*3*
     [manager GET:@"demo/ping" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"OK");
+        
+        //*4*
         NSDictionary *dictionary = [(NSDictionary *)responseObject objectForKey:@"response"];
         self.myEnv = [[ASEnvironment alloc] initWithJSONDictionary:dictionary];
+        
+        //*5*
         [self.tableView reloadData];
        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -80,22 +97,29 @@ static NSString * const BaseURLString = @"https://rec.api.appscho.com/";
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    // We only need one section here
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    /* We return our list from ASEnvironment.h in order to know how many row we will need.
+       Of course this works only if we already know how many rows we want to display... 
+       Here it's the best choice for memory management we avoid creating an array and it's count method.
+     */
     return ASEnvCellCount;
     
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    
+    //Instantiation of our custom cell
     static NSString *contentCellIdentifier = @"Cell";
     ASCustomCellTableViewCell *cell;
     
     cell = [tableView dequeueReusableCellWithIdentifier:contentCellIdentifier forIndexPath:indexPath];
     
+    //We go through our enumerator and display datas with a simple switch
     ASEnvCells environmentCells = indexPath.row;
    
     switch (environmentCells) {

@@ -11,6 +11,8 @@
 @implementation ASEnvironment
 
 
+//We pass the json dictionary in order to init our object
+
 - (id)initWithJSONDictionary:(NSDictionary *)jsonDictionary {
     
     if(self = [self init]){

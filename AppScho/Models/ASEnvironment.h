@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+//Enum in order to list all the cells we will need (very usefull if we need to add or remove cells)
+
 typedef NS_ENUM(NSInteger, ASEnvCells){
     
     ASEnvCellBuild,
@@ -19,10 +21,14 @@ typedef NS_ENUM(NSInteger, ASEnvCells){
 
 @interface ASEnvironment : NSObject
 
+
+
 @property (strong, nonatomic) NSString *build;
 @property (strong, nonatomic) NSString *context;
 @property (strong, nonatomic) NSString *env;
 
+
+//setter method
 - (id)initWithJSONDictionary:(NSDictionary *)jsonDictionary;
 
 
