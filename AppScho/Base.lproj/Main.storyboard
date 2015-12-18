@@ -15,17 +15,14 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BYQ-Nn-tKe" userLabel="TopView">
-                                <rect key="frame" x="-4" y="0.0" width="383" height="108"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="108"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenue sur AppScho" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHV-fj-y2Y">
-                                        <rect key="frame" x="8" y="31" width="367" height="45"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="zli-QQ-aa2"/>
-                                        </constraints>
+                                        <rect key="frame" x="8" y="31" width="584" height="45"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -33,128 +30,110 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.16078431372549018" green="0.34509803921568627" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="zHV-fj-y2Y" firstAttribute="leading" secondItem="BYQ-Nn-tKe" secondAttribute="leading" constant="8" id="LrP-TD-idp"/>
-                                    <constraint firstAttribute="height" constant="108" id="aZs-za-CaF"/>
-                                    <constraint firstAttribute="trailing" secondItem="zHV-fj-y2Y" secondAttribute="trailing" constant="8" id="dkh-IU-L1O"/>
-                                    <constraint firstItem="zHV-fj-y2Y" firstAttribute="top" secondItem="BYQ-Nn-tKe" secondAttribute="top" constant="31" id="sYO-KH-D9y"/>
+                                    <constraint firstAttribute="height" constant="108" id="CmX-JS-I0C"/>
+                                    <constraint firstItem="zHV-fj-y2Y" firstAttribute="trailing" secondItem="BYQ-Nn-tKe" secondAttribute="trailingMargin" id="CqS-7b-TFl"/>
+                                    <constraint firstItem="zHV-fj-y2Y" firstAttribute="top" secondItem="BYQ-Nn-tKe" secondAttribute="top" constant="31" id="KKK-af-OBP"/>
+                                    <constraint firstItem="zHV-fj-y2Y" firstAttribute="centerY" secondItem="BYQ-Nn-tKe" secondAttribute="centerY" id="vGL-eJ-FML"/>
+                                    <constraint firstItem="zHV-fj-y2Y" firstAttribute="leading" secondItem="BYQ-Nn-tKe" secondAttribute="leadingMargin" id="w7g-fQ-Yvh"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Weh-By-VEk" userLabel="TextFieldView">
-                                <rect key="frame" x="92" y="296" width="192" height="77"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginUser" translatesAutoresizingMaskIntoConstraints="NO" id="5wL-Wj-c0w">
-                                        <rect key="frame" x="20" y="20" width="37" height="37"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="37" id="Hyo-rh-1lf"/>
-                                            <constraint firstAttribute="width" constant="37" id="v8A-I5-pJ6"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="409" id="Bp5-a5-9bn"/>
-                                    <constraint firstAttribute="height" constant="77" id="RNZ-X3-3Fz"/>
-                                    <constraint firstItem="5wL-Wj-c0w" firstAttribute="top" secondItem="Weh-By-VEk" secondAttribute="top" constant="20" id="Xz5-Hg-Scg"/>
-                                    <constraint firstItem="5wL-Wj-c0w" firstAttribute="leading" secondItem="Weh-By-VEk" secondAttribute="leading" constant="20" id="ZoV-qf-hNt"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Bp5-a5-9bn"/>
-                                    </mask>
-                                </variation>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZc-5l-gWI">
-                                <rect key="frame" x="92" y="381" width="192" height="59"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZc-5l-gWI">
+                                <rect key="frame" x="145" y="347" width="309" height="59"/>
                                 <color key="backgroundColor" red="0.16078431369999999" green="0.34509803919999998" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="59" id="0Gl-mb-bp7"/>
+                                    <constraint firstAttribute="height" constant="59" id="hHP-pG-XpW"/>
+                                    <constraint firstAttribute="width" constant="309" id="tGC-m9-H0J"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
                                 <state key="normal" title="Se connecter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="105" y="413" width="190" height="59"/>
+                                </variation>
                                 <connections>
                                     <action selector="connectButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tep-qc-Jgm"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veuillez rentrer votre nom d'utilisateur" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1N-Oj-YeV">
-                                <rect key="frame" x="16" y="605" width="343" height="42"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Weh-By-VEk" userLabel="TextFieldView">
+                                <rect key="frame" x="145" y="261" width="309" height="78"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nom d'utilisateur" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="mGW-la-B0h">
+                                        <rect key="frame" x="65" y="8" width="236" height="62"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginUser" translatesAutoresizingMaskIntoConstraints="NO" id="5wL-Wj-c0w">
+                                        <rect key="frame" x="20" y="20" width="37" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="37" id="7kR-ug-42A"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="qLO-eG-rtX"/>
+                                    <constraint firstItem="5wL-Wj-c0w" firstAttribute="top" secondItem="Weh-By-VEk" secondAttribute="top" constant="20" id="B9R-Q5-d3S"/>
+                                    <constraint firstItem="mGW-la-B0h" firstAttribute="leading" secondItem="5wL-Wj-c0w" secondAttribute="trailing" constant="8" symbolic="YES" id="FAr-SF-PZV"/>
+                                    <constraint firstItem="5wL-Wj-c0w" firstAttribute="leading" secondItem="Weh-By-VEk" secondAttribute="leading" constant="20" id="Hva-zl-IYz"/>
+                                    <constraint firstItem="mGW-la-B0h" firstAttribute="bottom" secondItem="Weh-By-VEk" secondAttribute="bottomMargin" id="Nkx-Gc-USM"/>
+                                    <constraint firstItem="mGW-la-B0h" firstAttribute="top" secondItem="Weh-By-VEk" secondAttribute="topMargin" id="P9k-17-g92"/>
+                                    <constraint firstItem="5wL-Wj-c0w" firstAttribute="centerY" secondItem="mGW-la-B0h" secondAttribute="centerY" id="fLb-kd-J5a"/>
+                                    <constraint firstItem="mGW-la-B0h" firstAttribute="trailing" secondItem="Weh-By-VEk" secondAttribute="trailingMargin" id="fRU-AS-gSA"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
-                                <color key="textColor" red="0.65384615384615385" green="0.0" blue="0.0061211478548920482" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="nom d'utilisateur" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="mGW-la-B0h">
-                                <rect key="frame" x="88" y="14" width="96" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="96" id="QQX-5C-kkA"/>
-                                    <constraint firstAttribute="height" constant="50" id="pwv-9B-fgB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="QQX-5C-kkA"/>
-                                    </mask>
-                                </variation>
                                 <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="QQX-5C-kkA"/>
+                                    <mask key="subviews">
+                                        <include reference="mGW-la-B0h"/>
                                     </mask>
                                 </variation>
-                            </textField>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="105" y="327" width="190" height="78"/>
+                                </variation>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veuillez rentrer votre nom d'utilisateur" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1N-Oj-YeV">
+                                <rect key="frame" x="20" y="538" width="560" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="Elf-sh-FTP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="0.65384615384615385" green="0.0" blue="0.0061211478548920482" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="738" width="360" height="42"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Weh-By-VEk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="76" id="3Eo-ka-6k0"/>
-                            <constraint firstItem="BYQ-Nn-tKe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="7Kg-wT-rCu"/>
-                            <constraint firstItem="mGW-la-B0h" firstAttribute="centerY" secondItem="Weh-By-VEk" secondAttribute="centerY" id="Jwp-fi-o6d"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b1N-Oj-YeV" secondAttribute="bottom" constant="20" id="Jx0-rO-MrA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="BYQ-Nn-tKe" secondAttribute="trailing" constant="-20" id="Ldg-K0-B6B"/>
-                            <constraint firstItem="BYQ-Nn-tKe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="PrX-3X-qmt"/>
-                            <constraint firstItem="Weh-By-VEk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ume-zf-3Hk"/>
-                            <constraint firstItem="b1N-Oj-YeV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="au5-6r-tqk"/>
-                            <constraint firstItem="b1N-Oj-YeV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="fiO-Yq-Qbl"/>
-                            <constraint firstItem="vZc-5l-gWI" firstAttribute="leading" secondItem="Weh-By-VEk" secondAttribute="leading" id="hRL-gM-q7n"/>
-                            <constraint firstItem="vZc-5l-gWI" firstAttribute="trailing" secondItem="Weh-By-VEk" secondAttribute="trailing" id="jYX-RJ-haa"/>
-                            <constraint firstItem="Weh-By-VEk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m0k-6J-5oT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="mGW-la-B0h" secondAttribute="trailing" constant="83" id="poi-ua-YNL"/>
-                            <constraint firstItem="vZc-5l-gWI" firstAttribute="top" secondItem="Weh-By-VEk" secondAttribute="bottom" constant="8" id="vT2-Jg-MA5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Weh-By-VEk" secondAttribute="trailing" constant="75" id="xJG-DM-AFK"/>
+                            <constraint firstItem="Weh-By-VEk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="261" id="4xx-t3-RIf"/>
+                            <constraint firstItem="vZc-5l-gWI" firstAttribute="centerX" secondItem="b1N-Oj-YeV" secondAttribute="centerX" id="61u-dU-c0v"/>
+                            <constraint firstItem="Weh-By-VEk" firstAttribute="trailing" secondItem="vZc-5l-gWI" secondAttribute="trailing" id="6nt-Oh-Gxx"/>
+                            <constraint firstItem="BYQ-Nn-tKe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="9h1-JB-9fT"/>
+                            <constraint firstItem="b1N-Oj-YeV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="JTP-Lq-ynC"/>
+                            <constraint firstAttribute="bottom" secondItem="b1N-Oj-YeV" secondAttribute="bottom" constant="20" symbolic="YES" id="WV7-5G-bdt"/>
+                            <constraint firstItem="vZc-5l-gWI" firstAttribute="top" secondItem="Weh-By-VEk" secondAttribute="bottom" constant="8" symbolic="YES" id="ZFN-ac-MC3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BYQ-Nn-tKe" secondAttribute="trailing" constant="-20" id="a3q-5b-1Sg"/>
+                            <constraint firstItem="BYQ-Nn-tKe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="dZT-Ja-Ch5"/>
+                            <constraint firstItem="Weh-By-VEk" firstAttribute="centerX" secondItem="BYQ-Nn-tKe" secondAttribute="centerX" id="oRo-Sc-gFM"/>
+                            <constraint firstItem="vZc-5l-gWI" firstAttribute="leading" secondItem="Weh-By-VEk" secondAttribute="leading" id="rKI-ey-kWT"/>
+                            <constraint firstItem="Weh-By-VEk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ugc-uD-FBG"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="mGW-la-B0h"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="Jwp-fi-o6d"/>
-                                <exclude reference="poi-ua-YNL"/>
-                            </mask>
-                        </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="mGW-la-B0h"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="Jwp-fi-o6d"/>
-                                <include reference="poi-ua-YNL"/>
+                                <include reference="Weh-By-VEk"/>
                             </mask>
                         </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="emptyTextfieldLabel" destination="b1N-Oj-YeV" id="noT-Rx-3Xq"/>
                         <outlet property="usernameTextfield" destination="mGW-la-B0h" id="dSg-ef-sth"/>
@@ -163,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="739" y="537"/>
+            <point key="canvasLocation" x="738" y="536"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="X1F-YP-QcZ">
@@ -174,14 +153,14 @@
                         <viewControllerLayoutGuide type="bottom" id="dI4-6s-jwY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uO4-tm-kNF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fqD-Fz-udQ" userLabel="TopView">
-                                <rect key="frame" x="-4" y="0.0" width="383" height="108"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="108"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bonjour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKV-hg-yjB">
-                                        <rect key="frame" x="8" y="31" width="367" height="45"/>
+                                        <rect key="frame" x="8" y="31" width="584" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="diB-5c-rzp"/>
                                         </constraints>
@@ -200,17 +179,17 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="khB-O8-tTx">
-                                <rect key="frame" x="16" y="179" width="343" height="242"/>
+                                <rect key="frame" x="20" y="179" width="560" height="242"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="242" id="MfQ-PA-Jdt"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="gFm-T5-kj9" customClass="ASCustomCellTableViewCell">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gFm-T5-kj9" id="MmR-1I-P7p">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2p-Dv-TKo">
@@ -222,7 +201,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="mSq-do-pLN">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="mSq-do-pLN">
                                                     <rect key="frame" x="134" y="8" width="418" height="27"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
